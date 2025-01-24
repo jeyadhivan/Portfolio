@@ -1,0 +1,202 @@
+/* Container */
+.home-container {
+  min-height: 100vh;
+  background-color: #030014;
+  overflow: hidden;
+  font-family: Roboto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 20px 0 20px; /* Added padding-top to create gap with the navbar */
+  width: 100vw;
+}
+.description {
+  color: white;
+  text-align: left;
+}
+/* Status Badge */
+.status-badge {
+  animation: float 3s ease-in-out infinite;
+  margin: 60px;
+  align-items: flex-start;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.status-badge .badge-wrapper {
+  position: relative;
+}
+.status-badge .badge-glow {
+  position: absolute;
+  inset: -0.5rem;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  border-radius: 9999px;
+  filter: blur(4px);
+  opacity: 0.3;
+  transition: opacity 1s;
+}
+.status-badge .badge-content {
+  position: relative;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+.status-badge .badge-text {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.status-badge .badge-text .icon {
+  margin-right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  color: #4f52c9;
+}
+
+/* Glowing Title */
+.main-title h1 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  color: #fff; /* Ensure the text is white */
+  text-shadow: rgba(0, 34, 255, 0.9) 0px 0px 39px; /* Mild shadow */
+}
+.main-title span {
+  position: relative;
+  display: inline-block;
+}
+.main-title span::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  background: linear-gradient(130deg, #5254b8, #975ecd);
+  filter: blur(10px);
+  opacity: 0.2;
+}
+.main-title .text-highlight {
+  background: white;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-title .text-highlights {
+  background: linear-gradient(to left, #da75e1, #da75e1, #363ab4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Typing Effect */
+.typing-effect {
+  font-size: 20px;
+  font-weight: 300;
+  color: #d5d9e9;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.typing-effect .cursor {
+  width: 3px;
+  height: 1.5rem;
+  background: linear-gradient(to top, #6366f1, #a855f7);
+  margin-left: 0.5rem;
+  animation: blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+}
+.tech-stack-item {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #d1d5db;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  transition: background 0.3s;
+}
+.tech-stack-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+}
+.cta-button {
+  position: relative;
+  width: 160px;
+  height: 2.75rem;
+  background: #030014;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  -webkit-box-shadow: -1px 4px 45px 0px rgba(59, 40, 97, 1);
+  -moz-box-shadow: -1px 4px 45px 0px rgba(59, 40, 97, 1);
+  box-shadow: -1px 4px 45px 0px rgba(59, 40, 97, 1);
+}
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #4f52c9, #8644c5);
+  opacity: 0.5;
+  filter: blur(8px);
+  z-index: -1;
+}
+.cta-button:hover {
+  box-shadow: -5px -4px 31px 8px rgba(140, 89, 185, 0.57);
+  -webkit-box-shadow: -5px -4px 31px 8px rgba(140, 89, 185, 0.57);
+  -moz-box-shadow: -5px -4px 31px 8px rgba(140, 89, 185, 0.57);
+}
+.cta-button span {
+  background: linear-gradient(to right, #f3f4f6, white);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+/* Animated Circle */
+.animated-circle {
+  width: 300px;
+  height: 300px;
+  background: url("https://img.freepik.com/premium-photo/anime-girl-with-headphones-laptop-generative-ai_1108314-3985.jpg")
+    no-repeat center center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+/* Social Links */
+.social-links {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.description {
+  margin: 20px 0px;
+  font-size: 22px;
+  color: grey;
+}

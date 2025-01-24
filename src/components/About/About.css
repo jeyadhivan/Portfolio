@@ -1,0 +1,247 @@
+.about-page {
+  min-height: 100vh;
+
+  color: white;
+  font-family: Roboto;
+
+  margin-top: 10%;
+  background-color: #030014;
+  padding: 80px 20px 0 20px;
+  width: 100vw;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+
+.header-title h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to bottom,
+    #1e1a85,
+    #364897,
+    #c05be2,
+    #c667ad
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.header-subtitle {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-image: linear-gradient(to left, purple,rgb(202, 98, 159),);
+  margin: 5px;
+}
+
+.profile-image-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
+  -webkit-box-shadow: inset 0px 0px 45px -8px rgba(153, 86, 181, 1);
+  -moz-box-shadow: inset 0px 0px 45px -8px rgba(153, 86, 181, 1);
+  box-shadow: inset 0px 0px 45px -8px rgba(153, 86, 181, 1);
+  border-radius: 50%;
+}
+
+.profile-image {
+  position: relative;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.stat-card {
+  position: relative;
+  backdrop-filter: blur(0px) saturate(190%);
+  -webkit-backdrop-filter: blur(0px) saturate(190%);
+  background-color: rgba(17, 25, 40, 0.59);
+  border-radius: 12px;
+  border: 0.5px solid rgb(140, 138, 138);
+  width: 200px;
+}
+
+.stat-card-content {
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stat-card-content:hover {
+  transform: scale(1.05);
+}
+
+.stat-card-background {
+  position: absolute;
+}
+
+/*.stat-card-content:hover .stat-card-background {
+  opacity: 0.2;
+}*/
+
+.stat-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.stat-card-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(148, 32, 32, 0.1);
+  border-radius: 50%;
+}
+
+.stat-card-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.stat-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.stat-card-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-card-description {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  background-image: linear-gradient(
+    to bottom,
+    #1e1a85,
+    #364897,
+    #c05be2,
+    #c667ad
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 1.75;
+  color: #d1d5db;
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+.stat-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.stat-card-wrapper {
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.content-left {
+  text-align: left;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .stat-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.gradient1 {
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+}
+
+.gradient2 {
+  background: linear-gradient(45deg, #a855f7, #6366f1);
+}
+
+.gradient3 {
+  background: linear-gradient(45deg, #6366f1, #a855f7);
+}
+.CV {
+  color: white;
+  border: 2px solid rgb(157, 40, 203);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 0px 45px -8px rgb(195, 86, 175);
+  -moz-box-shadow: 0px 0px 45px -8px rgb(94, 86, 181);
+  box-shadow: 0px 0px 45px -8px rgb(34, 39, 113);
+}
+.buttons-cv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.CVP {
+  color: #c05be2;
+}

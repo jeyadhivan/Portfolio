@@ -1,0 +1,185 @@
+.home {
+  background-color: #0d1444;
+  width: 100vw;
+  padding-top: 100px;
+  font-family: Roboto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home h1 {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #362caa, #e083ec);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home p {
+  color: rgb(193, 209, 223);
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.heading {
+  width: 800px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+@font-face {
+  font-family: "Neon Glow";
+  src: url(https://assets.codepen.io/230569/NeonGlow-8VLz.ttf);
+}
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.link-bar {
+  border: 1px solid rgba(245, 245, 248, 0.3); /* Subtle border */
+  color: white;
+  width: 75%;
+  align-self: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+
+  /* Glassy effect */
+  background: rgba(13, 20, 68, 0.4); /* Semi-transparent background */
+  background-clip: padding-box;
+  backdrop-filter: blur(8px) saturate(100%) contrast(100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.link-bar div {
+  border: 1px solid rgba(245, 245, 248, 0.3); /* Light border */
+  padding: 20px;
+  width: 32%;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.5;
+  /* Initial gradient background */
+  background: linear-gradient(90deg, #042a5f, #410250); /* Dark gray tones */
+  color: white; /* White text */
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.link-bar div:hover {
+  /* Slight scale-up for the entire div */
+  transform: scale(1.05);
+}
+
+.link-bar div:hover i,
+.link-bar div:hover svg {
+  animation: shakeX 1s ease-in-out both; /* ShakeX animation for icons */
+}
+
+/* Icon styling */
+.link-bar div svg {
+  font-size: 2rem; /* Adjust icon size */
+  color: white; /* White color for icons */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ShakeX animation keyframes */
+@keyframes shakeX {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  
+}
+.animate__shakeX {
+  animation-name: shakeX;
+  animation-duration: 0.1s; /* Adjust duration for faster shakes */
+  animation-fill-mode: both;
+}
+
+#gasses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > * {
+    margin: 2rem;
+  }
+}
+
+.gas {
+  --blur: 1.75rem;
+  --box-blur: calc(0.5 * var(--blur));
+  --glow: var(--color);
+  --size: 12rem;
+
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid currentColor;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(0, 0, 0, 0.15),
+    inset 0 0 var(--box-blur) var(--glow), 0 0 var(--box-blur) var(--glow);
+  color: var(--color, rgb(1, 1, 1));
+  display: inline-flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  height: var(--size);
+  justify-content: space-around;
+  padding: 1rem;
+  width: var(--size);
+
+  > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .number {
+    font-weight: 700;
+  }
+
+  .symbol {
+    font-size: 4rem;
+    font-family: "Neon Glow";
+    text-shadow: 0 0 var(--blur) var(--glow);
+  }
+
+  &.he {
+    --color: #fceaac;
+    filter: saturate(175%);
+  }
+  &.ne {
+    --color: #fda802;
+    filter: brightness(110%);
+  }
+  &.ar {
+    --color: #e555c7;
+    filter: brightness(125%);
+  }
+  &.kr {
+    --color: #b7e7f7;
+    filter: saturate(200%);
+  }
+  &.xe {
+    --color: #38d148;
+    filter: brightness(105%);
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px 5px var(--glow), 0 0 10px 2px var(--glow) inset;
+  }
+}
