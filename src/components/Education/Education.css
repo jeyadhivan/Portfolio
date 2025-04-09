@@ -1,0 +1,41 @@
+.education-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.education-block {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 30px -10px rgba(153, 86, 181, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.education-block:hover {
+  transform: translateY(-5px);
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #a855f7;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .education-content {
+    grid-template-columns: 1fr;
+  }
+}
