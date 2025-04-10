@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from "react";
-
+import { Link } from "react-router-dom";
 import { LuGithub, LuLinkedin, LuInstagram } from "react-icons/lu";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { GoMail } from "react-icons/go";
@@ -90,13 +90,17 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="cta-buttons">
-          <a href="/portfolio" className="cta-button">
-            Projects <FaArrowUpRightFromSquare />
-          </a>
-          <a href="/contacts" className="cta-button">
-            Contact <GoMail />
-          </a>
+        <div className="cta-buttons" >
+          <Link to="/portfolio" >
+            <button className="cta-button">
+              Projects <FaArrowUpRightFromSquare />
+            </button>
+          </Link>
+          <Link to="/contacts">
+            <button className="cta-button">
+              Contact <GoMail />
+            </button>
+          </Link>
         </div>
         <div className="social-linksss">
           {[

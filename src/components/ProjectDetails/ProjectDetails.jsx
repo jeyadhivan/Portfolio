@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams , useNavigate} from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {
   FaGithub,
   FaExternalLinkAlt,
@@ -29,12 +29,14 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const navigate = useNavigate();
-  
 
   useEffect(() => {
-    fetch(`/api/projects/${id}`)
+    fetch("/api/projects.json")
       .then((response) => response.json())
-      .then((data) => setProject(data))
+      .then((data) => {
+        const selectedProject = data.find((proj) => proj.id === id);
+        setProject(selectedProject);
+      })
       .catch((error) => console.error("Error fetching project:", error));
   }, [id]);
 
@@ -44,33 +46,28 @@ const ProjectDetails = () => {
 
   return (
     <div className="project-details-container">
-      {/* Background Bubbles */}
       <div className="bg-bubbles">
         <div className="bubble bubble1" />
         <div className="bubble bubble2" />
         <div className="bubble bubble3" />
       </div>
-
-      {/* Grid Background Overlay */}
       <div className="grid-bg"></div>
-      {/* Project Header */}
+
       <div className="container">
         <div className="head-container">
           <h1 className="project-title">{project.title}</h1>
           <p className="project-para">{project.description}</p>
         </div>
-        {/* Image */}
         <div className="project-image-container">
           <img src={project.img} alt={project.title} />
         </div>
       </div>
 
       <div className="features-count-container">
-        {/* counts */}
         <section className="count-container">
           <div className="count-content">
             <p>{project.techCount}</p>
-            <p>Technolgies Used</p>
+            <p>Technologies Used</p>
           </div>
           <div className="count-content">
             <p>{project.featuresCount}</p>
@@ -78,11 +75,10 @@ const ProjectDetails = () => {
           </div>
         </section>
 
-        {/* Features */}
         <section className="features-section">
           <section className="objective-section">
             <h2 className="section-title">
-              <FaRocket className="icon" />{" "}
+              <FaRocket className="icon" />
               <p className="section-title">Objective</p>
             </h2>
             <p className="section-content">{project.objective}</p>
@@ -100,7 +96,7 @@ const ProjectDetails = () => {
           </ul>
         </section>
       </div>
-      {/* Links */}
+
       <div className="project-links">
         <a
           href={project.githubUrl}
@@ -119,7 +115,7 @@ const ProjectDetails = () => {
           <FaExternalLinkAlt className="icon" /> Live Demo
         </a>
       </div>
-      {/* Tech Stack */}
+
       <section className="tech-stack-section">
         <h2 className="section-title">
           <FaTools className="icon" /> Tech Stack
@@ -132,7 +128,10 @@ const ProjectDetails = () => {
           ))}
         </div>
       </section>
-      <button className="back-button" onClick={() => navigate("/portfolio")} ><FaArrowLeft className="icon" /> Back to Projects</button>
+
+      <button className="back-button" onClick={() => navigate("/portfolio")}>
+        <FaArrowLeft className="icon" /> Back to Projects
+      </button>
     </div>
   );
 };
