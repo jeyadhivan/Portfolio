@@ -48,29 +48,6 @@ const StatCard = memo(({ icon: Icon, color, value, label, description }) => (
 ));
 
 const AboutPage = () => {
-  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(
-      localStorage.getItem("certificates") || "[]"
-    );
-
-    const startDate = new Date("2021-11-06");
-    const today = new Date();
-    const experience =
-      today.getFullYear() -
-      startDate.getFullYear() -
-      (today <
-      new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate())
-        ? 1
-        : 0);
-
-    return {
-      totalProjects: storedProjects.length,
-      totalCertificates: storedCertificates.length,
-      YearExperience: experience,
-    };
-  }, []);
-
   const statsData = useMemo(
     () => [
       {
@@ -90,12 +67,12 @@ const AboutPage = () => {
       {
         icon: Globe,
         color: "gradient3",
-        value: YearExperience,
+        value: 1,
         label: "Years of Experience",
         description: "Continuous learning journey",
       },
     ],
-    [totalProjects, totalCertificates, YearExperience]
+    []
   );
 
   useEffect(() => {
@@ -116,7 +93,7 @@ const AboutPage = () => {
           </h2>
           <p className="description">
             Full-stack developer specializing in front-end technologies,
-            particularly skilled in React.js.Expertise in optimizing web
+            particularly skilled in React.js. Expertise in optimizing web
             applications for performance and responsiveness, with a focus on
             user-centric designs. Proven ability to collaborate effectively in
             team environments, manage time efficiently, and tackle technical
@@ -144,15 +121,14 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="content-right">
-          <div className="animated-circle">
-            <img
-              src="https://img.freepik.com/premium-photo/anime-girl-with-headphones-laptop-generative-ai_1108314-3985.jpg"
-              alt="Animated Circle"
-              className="circle-image"
-            />
-          </div>
+          <img
+            src="https://img.freepik.com/premium-photo/anime-girl-with-headphones-laptop-generative-ai_1108314-3985.jpg"
+            alt="Animated Circle"
+            className="circle-image"
+          />
         </div>
       </div>
+
       <div className="stat-cards">
         {statsData.map((stat, idx) => (
           <StatCard key={idx} {...stat} />

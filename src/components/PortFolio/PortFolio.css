@@ -96,3 +96,53 @@
     transform: translate3d(-10px, 0, 0);
   }
 }
+/* Mobile View: Devices with width 768px and below */
+@media screen and (max-width: 768px) {
+  .home {
+    padding-top: 80px;
+  }
+
+  .heading {
+    width: 90%;
+    text-align: center;
+  }
+
+  .home h1 {
+    font-size: 32px;
+  }
+
+  .home p {
+    font-size: 16px;
+  }
+
+  .link-bar {
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .link-bar div {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Active and hover styles adapted for mobile tap feedback */
+  .link-bar div:active,
+  .link-bar div.active {
+    opacity: 0.9;
+    background: linear-gradient(90deg, #042a5f, #410250);
+    color: #fff;
+    transform: scale(0.98);
+  }
+
+  .link-bar div:active svg,
+  .link-bar div:active i {
+    animation: shakeX 0.5s ease-in-out both;
+  }
+
+  .portfolio-content {
+    padding: 20px;
+  }
+}

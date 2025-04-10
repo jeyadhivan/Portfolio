@@ -13,7 +13,11 @@
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
+  background: linear-gradient(
+    to bottom right,
+    rgba(15, 23, 42, 0.9),
+    rgba(30, 41, 59, 0.9)
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0px 4px 30px rgba(128, 0, 128, 0.2);
   transition: all 0.3s ease-in-out;
@@ -27,7 +31,13 @@
 .project-card-overlay {
   position: absolute;
   inset: 0;
-  border: 1px solid linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+  border: 1px solid
+    linear-gradient(
+      to bottom right,
+      rgba(59, 130, 246, 0.1),
+      rgba(139, 92, 246, 0.1),
+      rgba(236, 72, 153, 0.1)
+    );
   opacity: 0.5;
   transition: opacity 0.3s ease-in-out;
 }
@@ -53,10 +63,8 @@
   width: 100%;
   height: 300px;
 
-
   transform: scale(1);
   transition: transform 0.5s ease-in-out;
-  
 }
 
 .project-card:hover .project-card-image {
@@ -68,7 +76,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 10px;
-  background: linear-gradient(to right, rgb(191, 219, 254), rgb(216, 180, 254), rgb(251, 207, 232));
+  background: linear-gradient(
+    to right,
+    rgb(191, 219, 254),
+    rgb(216, 180, 254),
+    rgb(251, 207, 232)
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
@@ -135,4 +148,57 @@
   width: 16px;
   height: 16px;
   margin-left: 5px;
+}
+
+/* Mobile View: Devices with width 768px and below */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    width: 95%;
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+
+  .project-card {
+    margin: 0 auto;
+  }
+
+  .project-card-image {
+    height: 200px;
+  }
+
+  .project-details-button,
+  .project-live-demo {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .project-card-title {
+    font-size: 1.1rem;
+  }
+
+  .project-card-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Touch device active states */
+@media (hover: none) and (pointer: coarse) {
+  .project-card:active {
+    box-shadow: 0px 4px 30px rgba(128, 0, 128, 0.4);
+    transform: scale(0.98);
+  }
+
+  .project-card-image:active {
+    transform: scale(1.02);
+  }
+
+  .project-details-button:active {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(0.97);
+  }
+
+  .project-live-demo:active {
+    color: rgb(147, 197, 253);
+    transform: scale(0.97);
+  }
 }

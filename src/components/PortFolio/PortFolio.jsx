@@ -7,6 +7,7 @@ import "./PortFolio.css";
 import Certificates from "../Certificates/Certificates";
 import TechStack from "../Techstack/TechStack";
 import Projects from "../Projects/Projects";
+import Footer from "../Footer/Footer";
 
 function PortFolio() {
   // Default active section is "projects"
@@ -56,6 +57,7 @@ function PortFolio() {
           {activeSection === "techstack" && <TechStack />}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

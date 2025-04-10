@@ -10,8 +10,17 @@
       "Persistent task storage with local storage"
     ],
     "featuresCount": "3",
-    "techStack": ["JavaScript", "HTML", "CSS"],
-    "techCount": "3",
+    "techStack": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "LocalStorage",
+      "UUID",
+      "Github",
+      "JavaScript",
+      "React-icons"
+    ],
+    "techCount": "8",
     "link": "#",
     "img": "https://i.imghippo.com/files/zZDh4902aA.png",
     "githubUrl": "https://github.com/jeyadhivan/simple-todo-enhancement.git"
@@ -29,8 +38,20 @@
       "Multiple secure payment options for a smooth checkout experience"
     ],
     "featuresCount": "5",
-    "techStack": ["React.js", "Context API", "JS-Cookie", "CSS"],
-    "techCount": "4",
+    "techStack": [
+      "React.js",
+      "Context API",
+      "JS-Cookie",
+      "CSS",
+      "Protected Route",
+      "JWT Token-Based Login",
+      "Authentication",
+      "Github",
+      "Cloudinary",
+      "React Router",
+      "Fetch API"
+    ],
+    "techCount": "11",
     "link": "https://jeyanxttrendz.ccbp.tech/login",
     "img": "https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-sm-outputs.png",
     "githubUrl": "https://github.com/jeyadhivan/nxt-trendz-paymentEnhancement.git"
@@ -41,13 +62,25 @@
     "description": "A movie discovery app featuring pagination for browsing popular, top-rated, and upcoming movies.",
     "objective": "Help users discover movies using TheMovieDB API.",
     "features": [
-      "Pagination for movie lists",
-      "Popular, Top Rated & Upcoming sections",
-      "Clean and responsive design"
+      "Search functionality for movies by name",
+      "Category-wise listings: Popular, Top Rated, Upcoming",
+      "Pagination with Next/Previous buttons",
+      "Movie detail page with title, rating, description, and poster",
+      "Responsive design for all devices",
+      "Integration with TheMovieDB API",
+      "Loading indicators and error handling"
     ],
-    "featuresCount": "3",
-    "techStack": ["React.js", "REST API", "CSS"],
-    "techCount": "3",
+    "featuresCount": "7",
+    "techStack": [
+      "React.js",
+      "Fetch API",
+      "CSS",
+      "React Router DOM",
+      "Github",
+      "Vercel",
+      "TMDB API"
+    ],
+    "techCount": "7",
     "link": "#",
     "img": "https://i.imghippo.com/files/xcv3567At.png",
     "githubUrl": "https://github.com/jeyadhivan/MoviesDatabase.git"
@@ -58,13 +91,24 @@
     "description": "A job search platform that allows users to filter and apply for jobs based on various criteria.",
     "objective": "Allow job seekers to find relevant jobs easily.",
     "features": [
-      "Search and filter jobs by employment type and salary range",
-      "Job detail view",
-      "Login and protected routes"
+      "Login form with Error handling",
+      "Job listings with: Company logo, Job role, location, employment type, Salary and ratings",
+      "Search and filter jobs by employment , salary range and Search Input",
+      "Job details page with: Job Skills, Life at Company, Description and Apply Now link",
+      "Implementation of protected routes"
     ],
-    "featuresCount": "3",
-    "techStack": ["React.js", "REST API", "CSS"],
-    "techCount": "3",
+    "featuresCount": "5",
+    "techStack": [
+      "React.js",
+      "Fetch API",
+      "CSS",
+      "React Router DOM",
+      "JS-Cookie",
+      "JWT Token-Based Login",
+      "Github",
+      "Protected Route"
+    ],
+    "techCount": "8",
     "link": "#",
     "img": "https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-sm-outputs.png",
     "githubUrl": "https://github.com/jeyadhivan/jobbyAppEnhance.git"
@@ -75,13 +119,22 @@
     "description": "A system to manage book inventory, user borrowing, and returns.",
     "objective": "Digitize library operations for ease of management.",
     "features": [
-      "Admin panel to manage books",
-      "Borrow/Return functionality",
-      "Track availability and due dates"
+      "Search input field triggered on Enter key press",
+      "Fetch and parse book data using fetch()",
+      "Spinner displayed while loading",
+      "Dynamically creates and appends DOM elements (image, author)",
+      "Graceful handling of no results"
     ],
-    "featuresCount": "3",
-    "techStack": ["MongoDB", "Express.js", "React.js", "Node.js"],
-    "techCount": "4",
+    "featuresCount": "5",
+    "techStack": [
+      "JavaScript",
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "Fetch API",
+      "Public Book API"
+    ],
+    "techCount": "6",
     "link": "#",
     "img": "https://i.imghippo.com/files/YlY8609DAc.jpeg",
     "githubUrl": "https://github.com/jeyadhivan/Library-Management.git"
@@ -97,8 +150,8 @@
       "Restart functionality"
     ],
     "featuresCount": "3",
-    "techStack": ["JavaScript", "HTML", "CSS"],
-    "techCount": "3",
+    "techStack": ["JavaScript", "HTML", "CSS", "Github"],
+    "techCount": "4",
     "link": "#",
     "img": "https://i.imghippo.com/files/kdu6831fE.png",
     "githubUrl": "https://github.com/jeyadhivan/Speed-typing-test.git"
@@ -126,13 +179,25 @@
     "description": "A smart video app showcasing trending content for endless entertainment and creativity.",
     "objective": "Create a YouTube-like experience with theme support.",
     "features": [
-      "Trending videos list",
-      "Save favorites",
-      "Light/Dark theme toggle"
+      "Authentication with login functionality",
+      "Dark and light theme toggle",
+      "Home, Trending, Gaming, and Saved Videos routes",
+      "Search functionality for videos",
+      "Video details page with video player and channel info",
+      "Save videos to a personal watchlist",
+      "Error handling for failed API calls",
+      "Responsive design across all devices"
     ],
-    "featuresCount": "3",
-    "techStack": ["React", "styled-components", "Context API"],
-    "techCount": "3",
+    "featuresCount": "8",
+    "techStack": [
+      "React.js",
+      "Styled Components",
+      "React Router DOM",
+      "Context API",
+      "Rest API",
+      "JWT Authentication"
+    ],
+    "techCount": "6",
     "link": "https://jeyaNxtWatch.ccbp.tech",
     "img": "https://i.ytimg.com/vi/wEFvcFp1Zfc/maxresdefault.jpg",
     "githubUrl": "https://github.com/jeyadhivan/Nxt-watch.git"
@@ -143,12 +208,22 @@
     "description": "An app designed to help users monitor and reflect on their daily moods for mental well-being.",
     "objective": "Provide an intuitive, visual representation of mood patterns.",
     "features": [
-      "Mood input options",
-      "Analytics and summaries",
-      "Interactive calendar view"
+      "Daily mood logging with emojis or mood labels",
+      "Add notes or journal entries with each mood",
+      "View mood history with date-wise filtering",
+      "Mood trends visualization using charts",
+      "Edit or delete past mood entries",
+      "Local storage to retain data between sessions",
+      "Clean and calming user interface"
     ],
-    "featuresCount": "3",
-    "techStack": ["React", "Chart.js", "LocalStorage API"],
+    "featuresCount": "7",
+    "techStack": [
+      "React",
+      "Chart.js",
+      "LocalStorage API",
+      "React Hooks",
+      "CSS"
+    ],
     "techCount": "3",
     "link": "https://gjtracker.ccbp.tech/login",
     "img": "https://i.imghippo.com/files/zHl5533GTE.png",
@@ -160,15 +235,59 @@
     "description": "An app to explore dishes by category, customize them, add to cart, and manage orders effortlessly.",
     "objective": "Simplify food discovery and ordering with customizable options and efficient cart management.",
     "features": [
-      "Find dishes by category",
-      "Customize dish ingredients",
-      "Add to cart and view cart section"
+      "Login authentication using js-cookie",
+      "Add to cart and manage cart items",
+      "Adjust quantity or remove items from cart",
+      "Route navigation between Home, Cart, and Login pages",
+      "React Context used for global cart state management",
+      "Responsive UI with clean design",
+      "Secure routing and redirection for unauthenticated users",
+      "Customization button available"
     ],
-    "featuresCount": "3",
-    "techStack": ["React", "Context API", "Authentication API"],
-    "techCount": "3",
-    "link": "https://jeyaRestaurantFinder.ccbp.tech",
-    "img": "https://example.com/restaurant-finder-image.jpg",
+    "featuresCount": "8",
+    "techStack": [
+      "React.js",
+      "React Router DOM",
+      "JavaScript",
+      "CSS",
+      "js-cookie",
+      "React Context",
+      "Vercel",
+      "GitHub"
+    ],
+    "techCount": "8",
+
+    "link": "https://gjfoodresapp.ccbp.tech/",
+    "img": "https://res.cloudinary.com/dnhlqf4yp/image/upload/v1744286000/Screenshot_47_uifcrn.png",
     "githubUrl": "https://github.com/jeyadhivan/Restaurant-app.git"
+  },
+  {
+    "id": "11",
+    "title": "Food Munch App",
+    "description": "A modern food ordering website with elegant UI, interactive menu sections, and responsive design built using HTML, CSS, and Bootstrap.",
+    "objective": "To provide users a seamless experience for exploring food menus, understanding services, and encouraging engagement through visually appealing sections.",
+    "features": [
+      "Landing page with banner and call-to-action",
+      "Why Choose Us section showcasing service highlights",
+      "Explore Menu with categorized food items",
+      "Responsive grid layout using Bootstrap",
+      "Delivery and Payment information with visuals",
+      "Social media follow links with branded icons",
+      "Fixed-top navbar with smooth scrolling",
+      "Mobile-friendly design with collapsible navbar"
+    ],
+    "featuresCount": "8",
+    "techStack": [
+      "HTML5",
+      "CSS3",
+      "Bootstrap 5",
+      "Responsive Design",
+      "Image Hosting (Cloudinary)",
+      "Smooth Scroll Navigation"
+    ],
+    "techCount": "6",
+    "link": "https://gjfoodmunch.ccbp.tech/",
+    "img": "https://shots.codepen.io/username/pen/WNPObWd-800.jpg?version=1699709409",
+    "githubUrl": "https://github.com/jeyadhivan/FoodMunchApp"
   }
 ]
