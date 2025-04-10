@@ -94,7 +94,7 @@ const Home = () => {
           <a href="/portfolio" className="cta-button">
             Projects <FaArrowUpRightFromSquare />
           </a>
-          <a href="/Contacts" className="cta-button">
+          <a href="/contacts" className="cta-button">
             Contact <GoMail />
           </a>
         </div>
