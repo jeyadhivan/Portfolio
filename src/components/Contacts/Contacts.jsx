@@ -1,35 +1,45 @@
-import React, { useState,  useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contacts.css";
 import SocialLinks from "../SocialLinks/SocialLinks";
-
-const LOCAL_STORAGE_KEY = "commentsData"; 
+import { db } from "../../../firebase"; // Adjust if needed
+import { ref, push, onValue } from "firebase/database";
 
 const Contacts = () => {
-  const [comments, setComments] = useState(() => {
-    // Load from localStorage on initial render
-    const savedComments = localStorage.getItem(LOCAL_STORAGE_KEY);
-    return savedComments ? JSON.parse(savedComments) : [];
-  });
+  const [comments, setComments] = useState([]);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
 
+  // Fetch comments from Firebase
   useEffect(() => {
-    // Save comments to localStorage whenever they change
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(comments));
-  }, [comments]);
+    const commentsRef = ref(db, "comments");
+    onValue(commentsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const commentsArray = Object.entries(data).map(([id, value]) => ({
+          id,
+          ...value,
+        }));
+        setComments(commentsArray.reverse()); // newest first
+      } else {
+        setComments([]);
+      }
+    });
+  }, []);
 
+  // Add new comment to Firebase
   const handlePostComment = (e) => {
     e.preventDefault();
     if (!name.trim() || !comment.trim()) return;
 
     const newComment = {
-      id: Date.now(),
       name: name.trim(),
       text: comment.trim(),
       timestamp: new Date().toISOString(),
     };
 
-    setComments([newComment, ...comments]); // Add new comment
+    const commentsRef = ref(db, "comments");
+    push(commentsRef, newComment);
+
     setName("");
     setComment("");
   };

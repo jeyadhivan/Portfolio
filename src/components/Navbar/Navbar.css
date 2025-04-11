@@ -11,7 +11,7 @@ nav.bg-transparent {
 }
 
 nav.bg-opacity-50 {
-  background-color: rgba(30, 30, 30, 0.6);
+  background-color: transparent;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -19,10 +19,10 @@ nav.bg-opacity-50 {
 }
 
 .nav-container {
-  width: 90vw;
+  width: 100vw;
 
   margin: 0;
-  padding: 0 0 0 80px;
+  padding: 0 50px 0 80px;
 }
 
 .nav-inner {
@@ -47,8 +47,11 @@ nav.bg-opacity-50 {
   font-weight: bold;
   background: linear-gradient(to right, #8c4fc5, #6366f1);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 }
+
 .nav-desktop {
   display: flex;
   align-items: center;
