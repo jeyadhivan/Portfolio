@@ -32,25 +32,24 @@ function PortFolio() {
             onClick={() => setActiveSection("projects")}
           >
             <PiCodeSimpleBold size={20} />
-            Projects
+            <span>Projects</span>
           </div>
           <div
             onClick={() => setActiveSection("certificates")}
             className={activeSection === "certificates" ? "active" : ""}
           >
             <GrCertificate size={20} />
-            Certificates
+            <span>Certificates</span>
           </div>
           <div
             onClick={() => setActiveSection("techstack")}
             className={activeSection === "techstack" ? "active" : ""}
           >
             <FaBoxesStacked size={20} />
-            Tech Stack
+            <span className="span">Tech Stack</span>
           </div>
         </div>
 
-        {/* Render the selected section */}
         <div className="portfolio-content">
           {activeSection === "projects" && <Projects />}
           {activeSection === "certificates" && <Certificates />}

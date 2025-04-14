@@ -29,7 +29,7 @@
 }
 
 .link-bar {
-  border: 1px solid rgba(245, 245, 248, 0.3); /* Subtle border */
+  border: 1px solid rgba(245, 245, 248, 0.3);
   color: white;
   width: 75%;
   align-self: center;
@@ -39,11 +39,10 @@
   padding: 10px;
   border-radius: 20px;
 
-  /* Glassy effect */
-  background: rgba(13, 20, 68, 0.4); /* Semi-transparent background */
+  background: rgba(13, 20, 68, 0.4);
   background-clip: padding-box;
   backdrop-filter: blur(8px) saturate(100%) contrast(100%);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .link-bar div {
@@ -54,24 +53,20 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  opacity: 0.5;
+  opacity: 1;
   color: rgb(234, 234, 234);
-  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    
 }
 
-/* Active styling for the selected section */
-.link-bar div.active {
-  opacity: 0.7;
+.active {
   background: linear-gradient(90deg, #042a5f, #410250);
-  
+
   color: #fff;
 }
 
-
-
 .link-bar div:hover {
-  transform: scale(1.0);
+  transform: scale(1);
   opacity: 0.3;
   background: linear-gradient(90deg, #042a5f, #410250);
 }
@@ -96,7 +91,7 @@
     transform: translate3d(-10px, 0, 0);
   }
 }
-/* Mobile View: Devices with width 768px and below */
+
 @media screen and (max-width: 768px) {
   .home {
     padding-top: 80px;
@@ -128,12 +123,12 @@
     font-size: 14px;
   }
 
-  /* Active and hover styles adapted for mobile tap feedback */
-  .link-bar div:active,
-  .link-bar div.active {
-    opacity: 0.9;
+  .link-bar div span:active,
+  .link-bar div span.active {
+   
     background: linear-gradient(90deg, #042a5f, #410250);
-    color: #fff;
+    color: #fff !important;
+    opacity:1;
     transform: scale(0.98);
   }
 
@@ -145,4 +140,7 @@
   .portfolio-content {
     padding: 20px;
   }
+}
+.span{
+  color:white
 }

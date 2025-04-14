@@ -42,7 +42,7 @@ const Navbar = () => {
                   key={item.label}
                   to={item.to}
                   className={`nav-item ${
-                    location.pathname === item.to ? "active" : ""
+                    location.pathname === item.to ? "actives" : ""
                   }`}
                 >
                   {item.label}
@@ -66,7 +66,7 @@ const Navbar = () => {
                 key={item.label}
                 to={item.to}
                 className={`nav-item ${
-                  location.pathname === item.to ? "active" : ""
+                  location.pathname === item.to ? "actives" : ""
                 }`}
               >
                 {item.label}
