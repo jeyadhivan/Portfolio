@@ -21,7 +21,7 @@
       "React-icons"
     ],
     "techCount": "8",
-    "link": "#",
+    "link": "https://simple-todo-enhancement.vercel.app/",
     "img": "https://res.cloudinary.com/dnhlqf4yp/image/upload/v1744612733/Screenshot_48_lrwme8.png",
     "githubUrl": "https://github.com/jeyadhivan/simple-todo-enhancement.git"
   },
@@ -81,7 +81,7 @@
       "TMDB API"
     ],
     "techCount": "7",
-    "link": "#",
+    "link": "https://moviedatabaseenhancement.vercel.app/",
     "img": "https://res.cloudinary.com/dnhlqf4yp/image/upload/v1744610538/Screenshot_44_hgd1pr.png",
     "githubUrl": "https://github.com/jeyadhivan/MoviesDatabase.git"
   },
@@ -109,7 +109,7 @@
       "Protected Route"
     ],
     "techCount": "8",
-    "link": "#",
+    "link": "https://jobby-app-enhance.vercel.app/login",
     "img": "https://assets.ccbp.in/frontend/content/react-js/jobby-app-jobs-sm-outputs.png",
     "githubUrl": "https://github.com/jeyadhivan/jobbyAppEnhance.git"
   },
