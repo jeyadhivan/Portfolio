@@ -4,6 +4,7 @@ import {
   Github,
   Instagram,
   Youtube,
+  Mail,
   ExternalLink,
 } from "lucide-react";
 import "./SocialLinks.css"; 
@@ -31,8 +32,8 @@ const socialLinks = [
   {
     name: "Gmail",
     displayName: "Gmail",
-    subText: "@jeya dhivan",
-    icon: Youtube,
+    subText: "@jeyadhivan",
+    icon: Mail,
     url: "#",
     color: "#FF0000",
     gradient: "from-[#FF0000] to-[#CC0000]",

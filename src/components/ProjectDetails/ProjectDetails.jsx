@@ -57,6 +57,22 @@ const ProjectDetails = () => {
         <div className="head-container">
           <h1 className="project-title">{project.title}</h1>
           <p className="project-para">{project.description}</p>
+          {project.credentials && (
+            <div className="project-credentials">
+              <h4>Demo Login Credentials:</h4>
+              <p>
+                <strong>Email:</strong> {project.credentials.username}
+              </p>
+              <p>
+                <strong>Password:</strong> {project.credentials.password}
+              </p>
+              <p className="credentials-note">
+                <em>
+                  Note: This project is for educational/demo purposes only.
+                </em>
+              </p>
+            </div>
+          )}
         </div>
         <div className="project-image-container">
           <img src={project.img} alt={project.title} />

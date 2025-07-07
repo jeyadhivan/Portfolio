@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./Contacts.css";
 import SocialLinks from "../SocialLinks/SocialLinks";
-import { db } from "../../../firebase"; // Adjust if needed
+import { db } from "../../../firebase";
 import { ref, push, onValue } from "firebase/database";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contacts = () => {
   const [comments, setComments] = useState([]);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
+  const [contactName, setContactName] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactMessage, setContactMessage] = useState("");
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // Fetch comments from Firebase
   useEffect(() => {
     const commentsRef = ref(db, "comments");
     onValue(commentsRef, (snapshot) => {
@@ -19,14 +26,16 @@ const Contacts = () => {
           id,
           ...value,
         }));
-        setComments(commentsArray.reverse()); // newest first
+        const sortedComments = commentsArray.sort(
+          (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+        );
+        setComments(sortedComments);
       } else {
         setComments([]);
       }
     });
   }, []);
 
-  // Add new comment to Firebase
   const handlePostComment = (e) => {
     e.preventDefault();
     if (!name.trim() || !comment.trim()) return;
@@ -39,22 +48,74 @@ const Contacts = () => {
 
     const commentsRef = ref(db, "comments");
     push(commentsRef, newComment);
-
     setName("");
     setComment("");
   };
 
-  const onSubmitForm = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
-    alert("Form submitted successfully!");
+
+    if (!contactName.trim() || !contactEmail.trim() || !contactMessage.trim()) {
+      setStatus("Please fill in all fields.");
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(contactEmail)) {
+      setStatus("Please enter a valid email address.");
+      return;
+    }
+
+    const contactData = {
+      name: contactName.trim(),
+      email: contactEmail.trim(),
+      message: contactMessage.trim(),
+      timestamp: new Date().toISOString(),
+    };
+
+    setLoading(true);
+    setStatus("");
+
+    try {
+      const contactRef = ref(db, "messages");
+      await push(contactRef, contactData);
+
+      await emailjs.send(
+        "service_tzywk7l",
+        "template_jqhkq3p",
+        {
+          from_name: contactName,
+          from_email: contactEmail,
+          message: contactMessage,
+        },
+        "oeBGnfDvptStLiEdI"
+      );
+
+      toast.success("Message sent successfully!");
+
+      setContactName("");
+      setContactEmail("");
+      setContactMessage("");
+    } catch (error) {
+      toast.error("Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
+  useEffect(() => {
+    if (status) {
+      const timeout = setTimeout(() => setStatus(""), 3000);
+      return () => clearTimeout(timeout);
+    }
+  }, [status]);
 
   const getTimeAgo = (timeString) => {
     const now = new Date();
     const past = new Date(timeString);
-    const diff = Math.floor((now - past) / 1000);
+    let diff = Math.floor((now - past) / 1000);
 
-    if (diff < 60) return `${diff} sec ago`;
+    if (diff < 0) diff = 0;
+
+    if (diff < 60) return "Just now";
     if (diff < 3600) return `${Math.floor(diff / 60)} min ago`;
     if (diff < 86400) return `${Math.floor(diff / 3600)} hrs ago`;
     return `${Math.floor(diff / 86400)} days ago`;
@@ -75,13 +136,15 @@ const Contacts = () => {
 
         {/* Right Section */}
         <div className="right-section">
-          <form className="contact-form" onSubmit={onSubmitForm}>
+          <form className="contact-form" onSubmit={handleContactSubmit}>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
               <input
                 type="text"
                 id="name"
                 placeholder="Enter your name"
+                value={contactName}
+                onChange={(e) => setContactName(e.target.value)}
                 required
               />
             </div>
@@ -91,6 +154,8 @@ const Contacts = () => {
                 type="email"
                 id="email"
                 placeholder="Enter your email"
+                value={contactEmail}
+                onChange={(e) => setContactEmail(e.target.value)}
                 required
               />
             </div>
@@ -100,12 +165,19 @@ const Contacts = () => {
                 id="message"
                 rows="5"
                 placeholder="Type your message here..."
+                value={contactMessage}
+                onChange={(e) => setContactMessage(e.target.value)}
                 required
               />
             </div>
-            <button type="submit" className="submit-button">
-              Send Message
+            <button type="submit" className="submit-button" disabled={loading}>
+              {loading ? "Sending..." : "Send Message"}
             </button>
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+            />
           </form>
 
           {/* Comment Section */}

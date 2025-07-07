@@ -103,7 +103,7 @@ const AboutPage = () => {
           </p>
           <div className="buttons-cv">
             <a
-              href="/Resume-Jeya.pdf"
+              href="/Jeyalakshmi_FullStack_Develper_Resume.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"

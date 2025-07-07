@@ -14,7 +14,6 @@
   --gradient-color: linear-gradient(to right, #90b5df, rgb(134, 207, 225));
 }
 
-/* General Reset */
 body {
   margin: 0;
   background: var(--background-color);
@@ -73,7 +72,6 @@ body {
   }
 }
 
-/* Title + Image */
 .container {
   display: flex;
   justify-content: space-between;
@@ -129,7 +127,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Features & Count */
 .features-count-container {
   display: flex;
   justify-content: space-between;
@@ -216,7 +213,6 @@ body {
   color: var(--secondary-color);
 }
 
-/* Project Links & Tech Stack */
 .project-links {
   margin-top: 40px;
   display: flex;
@@ -245,7 +241,6 @@ body {
   margin-right: 8px;
 }
 
-/* Tech Stack */
 .tech-stack-section {
   margin-top: 24px;
 }
@@ -272,7 +267,6 @@ body {
   background-color: rgba(202, 165, 237, 0.2);
 }
 
-/* Back Button */
 .back-button {
   margin-top: 40px;
   margin-left: auto;
@@ -291,7 +285,6 @@ body {
   box-shadow: 0 0 10px gray;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .container,
   .features-count-container {
@@ -311,4 +304,30 @@ body {
   .back-button {
     align-self: flex-end;
   }
+}
+
+.project-credentials {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 1px solid grey;
+  padding: 1rem;
+  color:#bbb;
+  box-shadow: 10px 10px 30px rgb(85, 4, 79);
+  border-radius: 6px;
+}
+
+.project-credentials h4 {
+  margin-bottom: 0.5rem;
+  color: #71abe6;
+}
+
+.project-credentials p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.credentials-note {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.5rem;
 }

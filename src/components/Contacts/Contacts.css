@@ -131,6 +131,11 @@
   margin-top: 20px;
   list-style: none;
   padding: 0;
+  border: 1px solid rgb(43, 42, 42);
+  box-shadow:  3px 3px 23px rgb(43, 13, 39);
+  border-radius: 5px;
+  height: 300px;
+  overflow-y: scroll;
 }
 
 .comment {
@@ -138,6 +143,7 @@
   gap: 12px;
   padding: 15px;
   border-bottom: 1px solid #e0e0e0;
+  
 }
 
 .avatar {
@@ -179,3 +185,12 @@
   color:rgb(91, 88, 88);
 
 }
+
+.status-message.success {
+  color: green;
+}
+
+.status-message.error {
+  color: red;
+}
+
