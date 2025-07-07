@@ -18,7 +18,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/jeyalakshmigowthaman"
+            href="https://linkedin.com/in/jeyalakshmigowthaman/"
             target="_blank"
             rel="noreferrer"
           >
