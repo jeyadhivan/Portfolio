@@ -11,20 +11,20 @@ const Footer = () => {
         </p>
         <div className="footer-icons">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/jeyadhivan"
             target="_blank"
             rel="noreferrer"
           >
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://linkedin.com/in/jeyalakshmigowthaman"
             target="_blank"
             rel="noreferrer"
           >
             <FaLinkedin />
           </a>
-          <a href="mailto:youremail@example.com">
+          <a href="mailto:jeyadhivan1995@gmail.com">
             <FaEnvelope />
           </a>
         </div>
